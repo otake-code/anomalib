@@ -1,0 +1,55 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/ramune"
+  normal_dir:
+    - "salt_charge/ok"
+    - "yoglet/ok"
+    - "hilemon/ok"
+    - "mentos/ok"
+    - "juicy_grape/ok"
+    - "juicy_soda/ok"
+    - "hueramune/ok"
+    - "colapunch/ok"
+    - "calpis_tablet/ok"
+  abnormal_dir:
+    - "salt_charge/crack"
+    - "yoglet/crack"
+    - "hilemon/crack"
+    - "mentos/crack"
+    - "juicy_grape/crack"
+    - "juicy_soda/crack"
+    - "hueramune/crack"
+    - "colapunch/crack"
+    - "calpis_tablet/crack"
+    - "salt_charge/chip"
+    - "yoglet/chip"
+    - "hilemon/chip"
+    - "mentos/chip"
+    - "juicy_grape/chip"
+    - "juicy_soda/chip"
+    - "hueramune/chip"
+    - "colapunch/chip"
+    - "calpis_tablet/chip"
+    - "salt_charge/scratch"
+    - "yoglet/scratch"
+    - "hilemon/scratch"
+    - "juicy_grape/scratch"
+    - "juicy_soda/scratch"
+    - "hueramune/scratch"
+    - "colapunch/scratch"
+    - "calpis_tablet/scratch"
+  normal_test_dir:
+    - "/data01/snacks/test/ramune/ootuburamune/ok"
+    - "/data01/snacks/test/ramune/mitsuyacider/ok"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

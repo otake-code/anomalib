@@ -1,0 +1,44 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/stick_snack"
+  normal_dir:
+    - "jagariko_cheese/ok"
+    - "jagariko_salad/ok"
+    - "jagariko_jagabutter/ok"
+    - "sayaendou_nonfly/ok"
+    - "jagabee_buttersyouyu/ok"
+    - "bi-no/ok"
+    - "scone_bbq/ok"
+    - "scone_cheese/ok"
+    - "scone_ebi/ok"
+    - "kappaebisen_salad/ok"
+    - "kappaebisen_sakuraebi/ok"
+    - "tsunaagearare/ok"
+  abnormal_dir:
+    - "jagariko_cheese/crack"
+    - "jagariko_salad/crack"
+    - "jagariko_jagabutter/crack"
+    - "sayaendou_nonfly/crack"
+    - "jagabee_buttersyouyu/crack"
+    - "bi-no/crack"
+    - "scone_bbq/crack"
+    - "scone_cheese/crack"
+    - "scone_ebi/crack"
+    - "kappaebisen_salad/crack"
+    - "kappaebisen_sakuraebi/crack"
+    - "tsunaagearare/crack"
+  normal_test_dir:
+    - "/data01/snacks/test/stick_snack/aji_curry/ok"
+    - "/data01/snacks/test/stick_snack/sapporopotato_vegetable/ok"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

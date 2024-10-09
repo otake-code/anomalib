@@ -1,0 +1,67 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/snack"
+  normal_dir:
+    - "vegetaberu_red/ok"
+    - "vegetaberu_yellow/ok"
+    - "vegetaberu_green/ok"
+    - "fuwattoebisenn/ok"
+    - "cheese_arare/ok"
+    - "cornpotage/ok"
+    - "kyabetsutaro/ok"
+    - "sittorichoco/ok"
+    - "caramelcorn/ok"
+    - "morokoshitaro/ok"
+    - "sapporo_bbq/ok"
+  abnormal_dir:
+    - "vegetaberu_red/crack"
+    - "vegetaberu_yellow/crack"
+    - "vegetaberu_green/crack"
+    - "fuwattoebisenn/crack"
+    - "cheese_arare/crack"
+    - "cornpotage/crack"
+    - "kyabetsutaro/crack"
+    - "sittorichoco/crack"
+    - "caramelcorn/crack"
+    - "morokoshitaro/crack"
+    - "sapporo_bbq/crack"
+    - "vegetaberu_red/chip"
+    - "vegetaberu_yellow/chip"
+    - "vegetaberu_green/chip"
+    - "fuwattoebisenn/chip"
+    - "cheese_arare/chip"
+    - "cornpotage/chip"
+    - "kyabetsutaro/chip"
+    - "sittorichoco/chip"
+    - "caramelcorn/chip"
+    - "morokoshitaro/chip"
+    - "sapporo_bbq/chip"
+    - "fuwattoebisenn/hole"
+    - "cheese_arare/hole"
+    - "cornpotage/hole"
+    - "kyabetsutaro/hole"
+    - "sittorichoco/hole"
+    - "caramelcorn/hole"
+    - "morokoshitaro/hole"
+    - "sapporo_bbq/hole"
+    - "cheese_arare/fork"
+    - "cornpotage/fork"
+    - "kyabetsutaro/fork"
+    - "sittorichoco/fork"
+    - "caramelcorn/fork"
+    - "morokoshitaro/fork"
+  normal_test_dir:
+    - "/data01/snacks/test/snack/tamanegisanntaro/ok"
+    - "/data01/snacks/test/snack/sugarrask_butter/ok"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

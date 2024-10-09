@@ -1,0 +1,55 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/soft_candy"
+  normal_dir:
+    - "hichew_apple/ok"
+    - "hichew_strewberry/ok"
+    - "hichew_watermelon/ok"
+    - "hichew_lemon/ok"
+    - "puccho_grape/ok"
+    - "hichew_grape/ok"
+    - "puccho_cola/ok"
+    - "puccho_soda/ok"
+    - "glico_caramel/ok"
+    - "milk_caramel_pack/ok"
+    - "milk_caramel/ok"
+    - "coffee_caramel/ok"
+  abnormal_dir:
+    - "hichew_apple/fork"
+    - "hichew_strewberry/fork"
+    - "hichew_watermelon/fork"
+    - "hichew_lemon/fork"
+    - "puccho_grape/fork"
+    - "hichew_grape/fork"
+    - "puccho_cola/fork"
+    - "puccho_soda/fork"
+    - "glico_caramel/fork"
+    - "milk_caramel_pack/fork"
+    - "milk_caramel/fork"
+    - "coffee_caramel/fork"
+    - "hichew_apple/scratch"
+    - "hichew_strewberry/scratch"
+    - "hichew_watermelon/scratch"
+    - "hichew_lemon/scratch"
+    - "puccho_grape/scratch"
+    - "hichew_grape/scratch"
+    - "puccho_cola/scratch"
+    - "puccho_soda/scratch"
+    - "glico_caramel/scratch"
+    - "milk_caramel_pack/scratch"
+    - "milk_caramel/scratch"
+    - "coffee_caramel/scratch"
+  normal_test_dir:
+    - "/data01/snacks/test/soft_candy/puccho_hinnyari/ok"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

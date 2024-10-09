@@ -1,0 +1,48 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/marshmallow"
+  normal_dir:
+    - "huwa_mashmallow/ok"
+    - "blueberry_mashmallow/ok"
+    - "petit_marshmallow/ok"
+    - "strawberry_mashmallow/ok"
+    - "calpis_mashmallow/ok"
+    - "snoopy_marshmallow/ok"
+    - "purin_mashmallow/ok"
+  abnormal_dir:
+    - "huwa_mashmallow/deformation"
+    - "blueberry_mashmallow/deformation"
+    - "petit_marshmallow/deformation"
+    - "strawberry_mashmallow/deformation"
+    - "calpis_mashmallow/deformation"
+    - "snoopy_marshmallow/deformation"
+    - "purin_mashmallow/deformation"
+    - "huwa_mashmallow/scratch"
+    - "blueberry_mashmallow/scratch"
+    - "petit_marshmallow/scratch"
+    - "strawberry_mashmallow/scratch"
+    - "calpis_mashmallow/scratch"
+    - "snoopy_marshmallow/scratch"
+    - "purin_mashmallow/scratch"
+    - "huwa_mashmallow/hole"
+    - "blueberry_mashmallow/hole"
+    - "petit_marshmallow/hole"
+    - "strawberry_mashmallow/hole"
+    - "calpis_mashmallow/hole"
+    - "snoopy_marshmallow/hole"
+    - "purin_mashmallow/hole"
+  normal_test_dir:
+    - "/data01/snacks/test/marshmallow/choco_mashmallow/ok"
+    - "/data01/snacks/test/marshmallow/white_mashmallow/ok"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

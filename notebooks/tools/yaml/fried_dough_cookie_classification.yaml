@@ -1,0 +1,50 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/fried_dough_cookie"
+  normal_dir:
+    - "gokujo_peanuts_karinto/ok"
+    - "matcha_karinto/ok"
+    - "milk_karinto/ok"
+    - "maple_karinto/ok"
+    - "gokujo_kokuto_karinto/ok"
+    - "kurobuto_karinto/ok"
+    - "kuri_karinto/ok"
+    - "kuroyanagi_karinto/ok"
+    - "shiro_karinto/ok"
+    - "kokuto_karinto/ok"
+  abnormal_dir:
+    - "gokujo_peanuts_karinto/crack"
+    - "matcha_karinto/crack"
+    - "milk_karinto/crack"
+    - "maple_karinto/crack"
+    - "gokujo_kokuto_karinto/crack"
+    - "kurobuto_karinto/crack"
+    - "kuri_karinto/crack"
+    - "kuroyanagi_karinto/crack"
+    - "shiro_karinto/crack"
+    - "kokuto_karinto/crack"
+    - "gokujo_peanuts_karinto/fork"
+    - "matcha_karinto/fork"
+    - "milk_karinto/fork"
+    - "maple_karinto/fork"
+    - "gokujo_kokuto_karinto/fork"
+    - "kurobuto_karinto/fork"
+    - "kuri_karinto/fork"
+    - "kuroyanagi_karinto/fork"
+    - "shiro_karinto/fork"
+    - "kokuto_karinto/fork"
+  normal_test_dir:
+    - "/data01/snacks/test/fried_dough_cookie/peanuts_karinto/ok"
+    - "/data01/snacks/test/fried_dough_cookie/lemon_karinto/ok"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

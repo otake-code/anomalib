@@ -1,0 +1,38 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/small_ramune"
+  normal_dir:
+    - "abekkoramune_lemon/ok"
+    - "abekkoramune_strewberry/ok"
+    - "abekkoramune_orange/ok"
+    - "abekkoramune_melon/ok"
+    - "abekkoramune_grape/ok"
+  abnormal_dir:
+    - "abekkoramune_lemon/chip"
+    - "abekkoramune_strewberry/chip"
+    - "abekkoramune_orange/chip"
+    - "abekkoramune_melon/chip"
+    - "abekkoramune_grape/chip"
+    - "abekkoramune_lemon/scratch"
+    - "abekkoramune_strewberry/scratch"
+    - "abekkoramune_orange/scratch"
+    - "abekkoramune_melon/scratch"
+    - "abekkoramune_grape/scratch"
+    - "abekkoramune_lemon/crack"
+    - "abekkoramune_strewberry/crack"
+    - "abekkoramune_orange/crack"
+    - "abekkoramune_melon/crack"
+    - "abekkoramune_grape/crack"
+  normal_test_dir:
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null
