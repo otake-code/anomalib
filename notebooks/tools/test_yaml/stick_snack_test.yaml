@@ -1,0 +1,21 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/test/stick_snack"
+  normal_dir:
+    - "aji_curry/ok"
+    - "sapporopotato_vegetable/ok"
+  abnormal_dir:
+    - "aji_curry/crack"
+    - "sapporopotato_vegetable/crack"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

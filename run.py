@@ -16,6 +16,8 @@ folders = [
     "soft candy",
     "stick snack"
 ]
+#単体ならば、以下のように記述
+#anomalib train --data notebooks/tools/yaml/chips_classification.yaml --model anomalib.models.Patchcore --task CLASSIFICATION
 
 # 各フォルダに対してコマンドを実行
 for folder in folders:

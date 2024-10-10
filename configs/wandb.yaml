@@ -1,0 +1,15 @@
+trainer:
+  logger:
+    class_path: lightning.pytorch.loggers.WandbLogger
+    init_args:
+      project: "my_project"
+      name: "my_experiment"
+      log_model: true
+      save_dir: "./wandb_logs"
+
+model:
+  name: anomalib.models.Patchcore
+  task: CLASSIFICATION
+
+data:
+  # データの設定をここに記述

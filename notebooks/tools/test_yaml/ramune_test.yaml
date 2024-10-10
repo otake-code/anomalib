@@ -1,0 +1,29 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/test/ramune"
+  normal_dir:
+    - "ootuburamune/ok"
+    - "ootuburamune/ok"
+    - "ootuburamune/ok"
+    - "mitsuyacider/ok"
+    - "mitsuyacider/ok"
+    - "mitsuyacider/ok"
+  abnormal_dir:
+    - "ootuburamune/scratch"
+    - "ootuburamune/crack"
+    - "ootuburamune/chip"
+    - "mitsuyacider/scratch"
+    - "mitsuyacider/crack"
+    - "mitsuyacider/chip"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

@@ -1,0 +1,29 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/test/marshmallow"
+  normal_dir:
+    - "choco_mashmallow/ok"
+    - "choco_mashmallow/ok"
+    - "choco_mashmallow/ok"
+    - "white_mashmallow/ok"
+    - "white_mashmallow/ok"
+    - "white_mashmallow/ok"
+  abnormal_dir:
+    - "choco_mashmallow/scratch"
+    - "choco_mashmallow/hole"
+    - "choco_mashmallow/deformation"
+    - "white_mashmallow/scratch"
+    - "white_mashmallow/hole"
+    - "white_mashmallow/deformation"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

@@ -1,0 +1,43 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/test/chocolate"
+  normal_dir:
+    - "koubechocolat/ok"
+    - "koubechocolat/ok"
+    - "koubechocolat/ok"
+    - "koubechocolat/ok"
+    - "koubechocolat/ok"
+    - "koubechocolat/ok"
+    - "koubechocolat/ok"
+    - "meiji_origotou/ok"
+    - "meiji_origotou/ok"
+    - "meiji_origotou/ok"
+    - "meiji_origotou/ok"
+    - "meiji_origotou/ok"
+    - "meiji_origotou/ok"
+    - "meiji_origotou/ok"
+  abnormal_dir:
+    - "koubechocolat/abrasion"
+    - "koubechocolat/scratch"
+    - "koubechocolat/hole"
+    - "koubechocolat/fork"
+    - "koubechocolat/crack"
+    - "koubechocolat/chip"
+    - "meiji_origotou/scratch"
+    - "meiji_origotou/hole"
+    - "meiji_origotou/fork"
+    - "meiji_origotou/crack"
+    - "meiji_origotou/chip"
+    - "meiji_origotou/abration"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null

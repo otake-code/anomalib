@@ -1,0 +1,33 @@
+class_path: anomalib.data.Folder
+init_args:
+  name: "SnackDataset"
+  root: "/data01/snacks/test/snack"
+  normal_dir:
+    - "tamanegisanntaro/ok"
+    - "tamanegisanntaro/ok"
+    - "tamanegisanntaro/ok"
+    - "tamanegisanntaro/ok"
+    - "sugarrask_butter/ok"
+    - "sugarrask_butter/ok"
+    - "sugarrask_butter/ok"
+    - "sugarrask_butter/ok"
+  abnormal_dir:
+    - "tamanegisanntaro/hole"
+    - "tamanegisanntaro/fork"
+    - "tamanegisanntaro/crack"
+    - "tamanegisanntaro/chip"
+    - "sugarrask_butter/hole"
+    - "sugarrask_butter/fork"
+    - "sugarrask_butter/crack"
+    - "sugarrask_butter/chip"
+  extensions: [".png"]
+  image_size: [256, 256]
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+  task: classification
+  test_split_mode: from_dir
+  test_split_ratio: 0.2
+  val_split_mode: same_as_test
+  val_split_ratio: 0.5
+  seed: null
